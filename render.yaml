@@ -3,8 +3,7 @@ services:
     name: audiofy
     env: node
     plan: free
-    rootDir: .
-    buildCommand: npm install
+    buildCommand: ./build.sh
     startCommand: npm start
     envVars:
       - key: NODE_ENV
