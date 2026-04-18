@@ -505,7 +505,19 @@
         © <span id="year"></span> Audiofy · Use com responsabilidade · Respeite os direitos autorais
     </footer>
 
-    <script src="script.js"></script>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+    // Carregar script.js dinamicamente
+    const scriptTag = document.createElement('script');
+    scriptTag.src = '/script.js';
+    scriptTag.type = 'text/javascript';
+    scriptTag.onload = () => {
+      console.log('script.js carregado com sucesso!');
+    };
+    scriptTag.onerror = () => {
+      console.error('Erro ao carregar script.js');
+    };
+    document.head.appendChild(scriptTag);
+    </script>
 </body>
 </html>
